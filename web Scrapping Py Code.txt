@@ -1,0 +1,16 @@
+import requests
+from bs4 import BeautifulSoup
+url=input("Enter Url:- \n")
+r=requests.get(url)
+soup=BeautifulSoup(r.content,'html.parser')
+p=soup.find('title').text
+p1=soup.find(class_='B_NuCI').text
+p2=soup.find('body').text
+print("\n")
+print("Website Title:- \n",p)
+print("Mobile Model:- \n",p1)
+print("information Data in Website:- \n",p2)
+
+''''''''''''''''
+URL=
+https://www.flipkart.com/realme-narzo-30-pro-5g-blade-silver-64-gb/p/itm8cb3552276c44?pid=MOBGYFAXUDBCN8MK&cmpid=product.share.pp&_refId=PP.2f4907d3-0dba-4dbc-ac2f-c9593c8f77bd.MOBGYFAXUDBCN8MK&_appId=WA
